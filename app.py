@@ -1,4 +1,5 @@
 # The wsgiref server is much better than the Flask server
+#------importing all libraries
 from shutil import ExecError
 from wsgiref import simple_server
 from flask import Flask
@@ -25,6 +26,7 @@ CORS(app)
 
 @app.route("/predict",methods=['POST'])
 @cross_origin()
+#------Creating  function for Route client
 def predictRouteClient():
     try:
         # If the requested folder path is not None
